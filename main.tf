@@ -6,7 +6,7 @@ secret_key = "LPvioJ6joME+HDNQYlhrOPhH7I8BdshgjhcxIJbl"
 }
 
 resource "aws_instance" "one" {
-  ami             = "ami-06fdbb60c8e83aa5e"
+  ami             = "ami-0376ec8eacdf70aae"
   instance_type   = "t2.micro"
   key_name        = "rmk8s"
   vpc_security_group_ids = [aws_security_group.three.id]
@@ -25,7 +25,7 @@ EOF
 }
 
 resource "aws_instance" "two" {
-  ami             = "ami-06fdbb60c8e83aa5e"
+  ami             = "ami-0376ec8eacdf70aae"
   instance_type   = "t2.micro"
   key_name        = "rmk8s"
   vpc_security_group_ids = [aws_security_group.three.id]
