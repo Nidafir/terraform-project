@@ -1,6 +1,6 @@
 resource "aws_elb" "bar" {
   name               = "nida-terraform-elb"
-  availability_zones = ["us-east-1a", "us-east-1b"]
+  availability_zones = ["ap-northeast-1a", "ap-northeast-1b"]
 
   listener {
     instance_port     = 80
