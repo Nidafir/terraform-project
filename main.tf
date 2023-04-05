@@ -1,16 +1,16 @@
 #this file consists of code for instances and sg
 provider "aws" {
-region = "us-east-1"
-access_key = "AKIASFD2GVVLIJFBT6E3"
-secret_key = "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"
+region = "ap-northeast-1"
+access_key = "AKIASFD2GVVLBBRVL7PZ"
+secret_key = "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"
 }
 
 resource "aws_instance" "one" {
-  ami             = "ami-00c39f71452c08778"
+  ami             = "ami-079a2a9ac6ed876fc"
   instance_type   = "t2.micro"
   key_name        = "dev"
   vpc_security_group_ids = [aws_security_group.three.id]
-  availability_zone = "us-east-1a"
+  availability_zone = "ap-northeast-1a"
   user_data       = <<EOF
 #!/bin/bash
 sudo -i
@@ -25,11 +25,11 @@ EOF
 }
 
 resource "aws_instance" "two" {
-  ami             = "ami-00c39f71452c08778"
+  ami             = "ami-079a2a9ac6ed876fc"
   instance_type   = "t2.micro"
   key_name        = "dev"
   vpc_security_group_ids = [aws_security_group.three.id]
-  availability_zone = "us-east-1b"
+  availability_zone = "ap-northeast-1b"
   user_data       = <<EOF
 #!/bin/bash
 sudo -i
@@ -76,7 +76,7 @@ name = "nida"
 }
 
 resource "aws_ebs_volume" "six" {
- availability_zone = "us-east-1b"
+ availability_zone = "ap-northeast-1b"
   size = 40
   tags = {
     Name = "ebs-001"
